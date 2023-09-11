@@ -9,3 +9,5 @@
 // FREE HOSTING -> Netlify...
 
 // LEARN github action ... THIS IS FOR CONTINUE DEPLOYMENT (without intervention)
+
+// go ahead create a function that adds two numbers
