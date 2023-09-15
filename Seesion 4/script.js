@@ -29,7 +29,7 @@ console.log("hello there guys ");
 
 // console.log(heading);
 
-console.log(document.querySelector(".asdas"));
+// console.log(document.querySelector(".asdas"));
 
 // RULE -> getElement(s) -> it will always return HTML Collection (Array LIKE Structure)
 
@@ -37,8 +37,8 @@ console.log(document.querySelector(".asdas"));
 
 //  ------------------ EDIT/UPDATE ELEMENT -----------------
 
-let paragraphElement = document.getElementById("paragraph");
-console.log(paragraphElement);
+// let paragraphElement = document.getElementById("paragraph");
+// console.log(paragraphElement);
 
 // paragraphElement.innerText = "<b>hello</b> guys I am a pragaph";
 // paragraphElement.innerHTML = "<b>hello</b> guys I am a pragaph";
@@ -48,18 +48,18 @@ console.log(paragraphElement);
 //  ------------------- CREATE/ADD ELEMENT ----------------------
 
 // 1. Create and Edit element
-const listItemELement = document.createElement("li");
-listItemELement.innerText = "suresh 007 cool";
+// const listItemELement = document.createElement("li");
+// listItemELement.innerText = "suresh 007 cool";
 
 // 2 -> select the parent or LIST
 
-const list = document.getElementById("nameList");
+// const list = document.getElementById("nameList");
 
 // 3. TO add newly Created ELEMETN we have 2 ways ...
 
 //  3.1 -> Append
 
-list.append(listItemELement);
+// list.append(listItemELement);
 // list.prepend(listItemELement);
 
 // list.children[2] = listItemELement; // cant have this
@@ -72,7 +72,32 @@ list.append(listItemELement);
 
 //  ------------- DELETE ELEMENTS ---------------
 
-const paragraphElemetn = document.getElementById("paragraph");
-paragraphElemetn.remove();
+// const paragraphElemetn = document.getElementById("paragraph");
+// paragraphElemetn.remove();
 
-list.removeChild(listItemELement);
+// list.removeChild(listItemELement);
+
+// ACTIVITY CODE ----
+
+function FindName(name) {
+  const nameList = document.getElementById("nameList"); // parent element
+  console.dir(nameList);
+  const children = nameList.children; // this is HTML COLLECTION ->
+  const childrenArr = Array.from(children);
+
+  console.log("children debug sdfsdfsdf", childrenArr);
+
+  for (let i = 0; i < childrenArr.length; i++) {
+    const listItem = childrenArr[i];
+    const text = listItem.innerText;
+
+    if (text === name) {
+      console.log(name, ": found");
+      return;
+    }
+  }
+
+  console.log(name, ":  not found");
+}
+
+FindName("ramit");

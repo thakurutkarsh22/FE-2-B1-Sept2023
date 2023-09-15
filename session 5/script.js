@@ -28,15 +28,29 @@
 
 //
 
+// console.log(1);
+
+// setTimeout(() => {
+//   console.log(3);
+// }, 3000);
+
+// setTimeout(() => {
+//   console.log(4);
+// }, 2000);
+
+// console.log(2);
+// ...   ... more lines
+
+// output
+
 console.log(1);
 
 setTimeout(() => {
   console.log(3);
-}, 3000);
+}, 0);
 
 setTimeout(() => {
   console.log(4);
-}, 2000);
+}, 0);
 
 console.log(2);
-// ...   ... more lines
