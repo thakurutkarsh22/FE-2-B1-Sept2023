@@ -1,0 +1,18 @@
+div {
+  min-height: 100px;
+  min-width: 100px;
+  border: 1px solid black;
+  padding: 30px;
+}
+
+#grandParent {
+  background-color: aqua;
+}
+
+#parent {
+  background-color: lightgreen;
+}
+
+#child {
+  background-color: lightpink;
+}
